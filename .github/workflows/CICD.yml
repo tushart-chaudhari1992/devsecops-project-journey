@@ -1,0 +1,25 @@
+name: CICD
+on:
+ workflow_dispatch: 
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: stage that codes
+        run: echo "This is code stage"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: stage that codes
+        run: echo "This is build stage"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: stage that codes
+        run: echo "This is test stage"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: stage that codes
+        run: echo "This is deploy stage"
+        
