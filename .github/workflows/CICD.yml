@@ -8,16 +8,19 @@ jobs:
       - name: stage that codes
         run: echo "This is code stage"
   build:
+    needs: code
     runs-on: ubuntu-latest
     steps:
       - name: stage that codes
         run: echo "This is build stage"
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: stage that codes
         run: echo "This is test stage"
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: stage that codes
